@@ -101,16 +101,49 @@
             <button class="themed-btn danger-btn" type="submit">Danger</button>
             <button class="themed-btn neutral-btn" type="submit">Neutral</button>
             <button class="themed-btn clear-btn" type="submit">Clear</button>
-            <button class="themed-btn pull-right" type="submit">Pull Right</button>
+            <button class="themed-btn blue-btn pull-right" type="submit">Pull Right</button>
         </div>
         <div class="component-box contain">
             <h5>Pop Up and Modal</h5>
             <button class="themed-btn" type="submit">Click for Modal</button>
-            <button class="themed-btn neutral-btn" type="submit">Click for Popup</button>
+            <button class="themed-btn blue-btn" type="submit" onclick="$('.popup').fadeIn(100);">Click for Popup</button>
+            <button class="themed-btn neutral-btn" type="submit" onclick="$('.palepopup').fadeIn(100);">Click for Pale Popup</button>
             
             <div class="popup dark-blue c-white primary-radius">
-            <div class="close-btn c-dark-blue"><i class="fa fa-x"></i></div>
+                <div class="close-btn c-dark-blue" onclick="$('.popup').fadeOut(100);"><i class="fa fa-x"></i></div>
+                <div class="poptitle">PopUp Box Title</div>
+                <div class="popbody">
+                Content Body
+                </div>
             </div>
+            <div class="palepopup c-darkest primary-radius">
+                <div class="close-btn c-darkest" onclick="$('.palepopup').fadeOut(100);"><i class="fa fa-x"></i></div>
+                <div class="poptitle c-dark-blue">PopUp Box Title</div>
+                <div class="popbody c-darkest">
+               Porta cras augue odio montes vut! Cras enim rhoncus magna pellentesque enim est turpis dis turpis mus auctor. In egestas ridiculus, sed vut sed! Hac lundium magnis etiam! Mauris dictumst tempor nec,
+                </div>
+                <div class="popbuttons clearfixer">
+                    <button class="themed-btn pull-right" type="submit">Default</button>
+                    <button class="themed-btn neutral-btn" type="submit">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="component-box contain">
+            <h5>Form Elements</h5>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="input-group">
+                <input type="text" class="input-group">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="input-group">
+                <input type="text" class="input-group">
+                </div>
+              </div>
+            </div>
+            
+            
         </div>
     </div>
 </body>
