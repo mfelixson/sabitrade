@@ -254,7 +254,7 @@ body{
     font-family: Open Sans;
     padding:10px;
     display: inline-block;
-    margin-right:2px;
+    margin:2px 2px 2px 0;
 }
 .themed-btn:hover, .themed-btn:active, .themed-btn:focus, .themed-btn:link, .themed-btn:visited{
     background: #40DF8E;
@@ -280,6 +280,12 @@ body{
 .themed-btn.neutral-btn:hover, .themed-btn.neutral-btn:active, .themed-btn.neutral-btn:focus, .themed-btn.neutral-btn:link, .themed-btn.neutral-btn:visited{
     background-color: #ABABAB;
 }
+.themed-btn.blue-btn{
+    background-color:#0881C8;
+}
+.themed-btn.blue-btn:hover, .themed-btn.blue-btn:active, .themed-btn.blue-btn:focus, .themed-btn.blue-btn:link, .themed-btn.blue-btn:visited{
+    background-color: #2390D0;
+}
 .themed-btn.clear-btn{
     background:none;
     border:1px solid #ccc;
@@ -297,6 +303,10 @@ body{
 /* HELPERS */
 .pull-right{
     float:right;
+}
+.clearfixer{
+    clear: both;
+    overflow: hidden;
 }
 .contain{
     padding:20px;
@@ -319,23 +329,53 @@ body{
     line-height:10px;
     text-align: center;
     position: absolute;
-    top:5px;
-    right:5px;
+    top:15px;
+    right:15px;
+    cursor: pointer;
+    transition: background 0.2s ease-out 0s;
 }
-
+.close-btn:hover{
+    background: #f5f5f5;
+}
 /* Popups */
-.popup{
-    padding:10px;
+.palepopup{
+    background: #fff;
+    border: 1px solid rgba(5,90,140,0.1);
+}
+.popup,.palepopup{
+    padding:0px;
     position: absolute;
     top:30%;
-    left:20%;
-    width:90%;
-    max-width:600px;
+    left:50%;
+    width:70vw;
+    margin-left:calc((-35vw) + 30px);
     min-height: 40px;
-    box-shadow: 0px 5px 10px rgba(8,129,200,0.2);
-    position: relative;
+    box-shadow: 0px 5px 40px rgba(8,129,200,0.1);
+    z-index:2000;
+    display:none;
 }
-
+.poptitle{
+    padding:15px;
+    font-size:12px;
+    color:#fff;
+    font-family: Lato;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    font-weight: 700;
+}
+.popbody{
+    padding:15px;
+    color:#fff;
+    font-family: Open Sans;
+    font-size:12px;
+    line-height: 20px;
+}
+.palepopup .poptitle{
+    border-bottom:1px solid rgba(5,90,140,0.1);
+}
+.popbuttons{
+    padding:10px 15px;
+    border-top:1px solid rgba(5,90,140,0.1);
+}
 
 /* BACKGROUND COLOR SWATCH */
 .blue{
